@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style scoped>
-
+  a {
+    margin: auto 1rem;
+  }
 </style>
