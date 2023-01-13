@@ -6,7 +6,7 @@
 body {
   padding: 0;
   margin: 0;
-  margin-top: 150px;
+  margin-top: 2rem;
   background: #eee;
 }
 #app {
@@ -53,11 +53,12 @@ a:visited {
   margin-right: 20px;
   color: white;
   opacity: 0.7;
-  transition: 0.2 ease color;
+  /*transition: 0.2 ease color;*/
 }
 #nav a.router-link-active,
 #nav a:hover {
   opacity: 1;
+  color: red;
 }
 #logo {
   font-weight: bold;
