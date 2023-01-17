@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
     <nav>
+      <router-link id="logo" to="/">Vue School Travel App</router-link>
       <router-link
           v-for="destination in destinations"
           :key="destination.id"
