@@ -12,9 +12,6 @@
         <img :src="`/images/${destination.image}`" :alt="destination.name">
       </router-link>
     </div>
-
-
-
   </div>
 </template>
 
