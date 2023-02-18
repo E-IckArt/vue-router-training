@@ -8,13 +8,13 @@ const routes = [
         path: '/destination/:id/:slug',
         name: 'destination.show',
         component: () => import('@/views/DestinationShow.vue'),
-        props: route => ({...route.params, id: parseInt(route.params.id)})
+        props: (route: { params: { id: string } }) => ({...route.params, id: parseInt(route.params.id)})
     },
     {
         path: '/destination/:id/:slug/:experienceSlug',
         name: 'experience.show',
         component: () => import('@/views/ExperienceShow.vue'),
-        props: route => ({...route.params, id: parseInt(route.params.id), experienceSlug: true})
+        props: (route: { params: { id: string } }) => ({...route.params, id: parseInt(route.params.id)})
     }
 ]
 

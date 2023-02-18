@@ -10,7 +10,7 @@
 import sourceData from '@/data.json';
 
 export default {
-  name: "ExperienceShow",
+  // name: "ExperienceShow",
   props: {
     id: {type: Number, required: true,},
     experienceSlug: {type: String, required: true,}
