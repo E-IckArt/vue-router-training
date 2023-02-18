@@ -19,8 +19,8 @@
               :experience="experience"
           />
         </router-link>
-
       </div>
+      <router-view />
     </section>
   </div>
 
