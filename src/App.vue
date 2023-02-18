@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import TheNavigation from "@/components/TheNavigation.vue";
-</script>
-
 <template>
     <TheNavigation />
     <div class="container">
@@ -14,6 +9,16 @@ import TheNavigation from "@/components/TheNavigation.vue";
 
     </div>
 </template>
+
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+import TheNavigation from "@/components/TheNavigation.vue";
+
+export default{
+  components: {TheNavigation}
+  
+}
+</script>
 
 <style scoped>
 .fade-enter-active,

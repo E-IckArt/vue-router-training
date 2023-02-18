@@ -6,8 +6,8 @@
     </span>
 </template>
 
-<!-- <script>
+<script>
 export default {
     name: "GoBack",
 }
-</script> -->
+</script>
