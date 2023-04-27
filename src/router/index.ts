@@ -42,7 +42,12 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     //linkActiveClass: "active", // Usefull to custom active link Classname
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        return savedPosition || new Promise((resolve) => {
+            setTimeout(() => resolve({top: 0, behavior: 'smooth'}), 300)
+        })
+    }
 })
 
 export default router
