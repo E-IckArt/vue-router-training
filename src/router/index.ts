@@ -3,9 +3,21 @@ import Home from '@/views/Home.vue'
 import sourceData from '@/data.json'
 
 
-
 const routes = [
     {path: '/', name: 'home', component: Home},
+    {
+        path: '/protected',
+        name: 'protected',
+        component: () => import('@/views/Protected.vue'),
+        meta: {
+            requiresAuth: true,
+        }
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: () => import('@/views/Login.vue')
+    },
     {
         path: '/destination/:id/:slug',
         name: 'destination.show',
@@ -36,10 +48,11 @@ const routes = [
         name: 'NotFound',
         component: () => import('@/components/NotFound.vue'),
     }
-    
+
 ]
 
 const router = createRouter({
+    end: undefined, sensitive: undefined, strict: undefined,
     history: createWebHistory(import.meta.env.BASE_URL),
     //linkActiveClass: "active", // Usefull to custom active link Classname
     routes,
@@ -50,4 +63,10 @@ const router = createRouter({
     }
 })
 
+router.beforeEach((to, from) => {
+    if (to.meta.requiresAuth && !window.user) {
+        // Need to login if not already logged in
+        return { name: 'login' }
+    }
+})
 export default router

@@ -9,6 +9,7 @@
       >
         {{ destination.name }} |
       </router-link>
+        <router-link :to="{ name:'protected'}">Dashboard</router-link>
     </nav>
   </div>
 </template>

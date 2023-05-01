@@ -51,4 +51,28 @@ export default {
 
 <style scoped>
 
+.destination,
+.experiences {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.cards {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+p {
+    margin: 1.5rem;
+}
+
+@media screen and (max-width: 750px) {
+    .destination-details {
+       flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 </style>

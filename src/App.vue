@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import TheNavigation from "@/components/TheNavigation.vue";
 
 export default{
-  components: {TheNavigation}
+  components: {TheNavigation, RouterLink, RouterView}
   
 }
 </script>
